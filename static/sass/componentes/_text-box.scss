@@ -1,0 +1,16 @@
+.section__text {
+    &--textbox {
+        color: $color-white;
+        font-size: 3rem;
+        text-transform: uppercase;
+        width: 48rem;
+        
+    }
+
+    &--paragraph {
+        font-size: 1.6rem;
+        font-weight: 300;
+        text-transform: none;
+        line-height: 1.5;
+    }
+}

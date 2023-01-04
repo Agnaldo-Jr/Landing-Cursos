@@ -1,0 +1,25 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: sans-serif;
+    // background-color: #1E1E1E;
+}
+
+html {
+    font-size: 62.5%;
+    
+    @include respond(tab-land) {
+        font-size: 37.5%;
+    }
+
+    @include respond(tab-port) {
+        font-size: 37.5%;
+    }
+
+    @include respond(phone) {
+        font-size: 20%;
+    }
+}

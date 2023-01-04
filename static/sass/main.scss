@@ -1,0 +1,21 @@
+@import 'abstract/mixin';
+
+@import 'base/general-config';
+@import 'base/animations';
+
+@import 'abstract/variaveis';
+@import 'abstract/utilidades';
+
+@import 'componentes/red-bar';
+@import 'componentes/header__text';
+@import 'componentes/button';
+@import 'componentes/scroll';
+@import 'componentes/card';
+@import 'componentes/text-box';
+@import 'componentes/grid';
+@import 'componentes/form';
+
+
+@import 'layout/header';
+@import 'layout/footer';
+@import 'pages/home';

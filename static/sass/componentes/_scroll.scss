@@ -1,0 +1,27 @@
+.scroll {
+    position: absolute;
+    width: 2rem;
+    height: 5rem;
+    border: 2px solid $main-color;
+    border-radius: 4rem;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    animation: fadeIn 1.5s forwards ease-in-out;
+    
+    &__circle {
+        position: inherit;
+        background-color: $main-color;
+        border-radius: 2rem;
+        width: 1rem;
+        height: 2rem;
+        top: 1rem;
+        left: .5rem;
+        
+        animation: btnBouncing 2s infinite ease-in-out;
+    }
+
+    @include respond(phone) {
+        display: none;
+    }
+}

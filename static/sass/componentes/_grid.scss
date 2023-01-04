@@ -1,0 +1,42 @@
+.section__text {
+
+    &-container--grid {
+        width: 50rem;
+        height: 80%;
+        position: absolute;
+        top: 50%;
+        right: 2%;
+        transform: translateY(-50%);
+
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 1.5rem;
+    
+        @include respond(phone) {
+            display: none;
+        }
+        
+        &-box {
+            height: 100%;
+            border: 2px solid $main-color;
+            
+        }
+    }
+}
+.border {
+    &__left-top {
+        border-radius: 0rem 5rem 0rem 5rem;
+    }
+
+    &__right-top {
+        border-radius: 5rem 0rem 5rem 0rem;
+    }
+
+    &__left-bottom{
+        border-radius: 5rem 0rem 5rem 0rem;
+    }
+    &__right-bottom{
+        border-radius: 0rem 5rem 0rem 5rem;
+    }
+}

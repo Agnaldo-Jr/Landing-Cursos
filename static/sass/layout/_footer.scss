@@ -1,0 +1,59 @@
+.footer {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 40rem;
+    
+    @include respond(phone) {
+        gap: 40rem;
+    }
+    
+    &__list {
+        list-style: none;
+        display: inline-block;
+        margin-left: 10rem;
+        margin-top: 5rem;
+
+        @include respond(phone) {
+            margin-left: 1.5rem;
+        }
+    }
+    &__item {
+        padding: .8rem;
+        &:not(:last-child){
+            border-bottom: 1.5px solid rgba($color-white, 1);
+        }
+
+    }
+    &__link:visited,
+    &__link:link {
+        color: $color-white;
+        text-decoration: none;
+        text-transform: uppercase;
+        padding: 1rem;
+        font-size: 1.6rem;
+        transition: all .5s ease-in-out;
+        &:hover,
+        &:active {
+            color: $color-primary-black;
+        }
+    }
+
+    &__text {
+        display: inline-block;
+        margin-top: 3rem;
+        font-size: 1.6rem;
+        color: $color-white;
+
+        &__heading-secondary {
+            text-transform: uppercase;
+            margin-bottom: 1rem;
+        }
+
+        &__paragraph {
+            width: 50rem;
+            margin-bottom: 2rem;
+        }
+
+    }
+}

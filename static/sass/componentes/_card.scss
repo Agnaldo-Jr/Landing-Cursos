@@ -1,0 +1,112 @@
+.card {
+    display: flex;
+    width: 100%;
+    height: 100vh;
+    gap: 12.5rem;
+    align-items: center;
+    justify-items: center;
+    justify-content: center;
+
+    @include respond(tab-land) {
+        gap: 10rem;
+    }
+    
+    @include respond(phone) {
+        flex-direction: column;
+        gap: 10rem;
+    }
+
+    &__side {
+        width: 32rem;
+        height: 52rem;
+        box-shadow: 0 0 2rem rgba($color-black, .25);
+        border-radius: 5px;
+        transition: all .8s ease-in-out;
+        perspective: 150rem;
+        -moz-perspective: 150rem;
+        position: relative;
+        backface-visibility: hidden;
+
+        &--front {
+            position: absolute;
+            background-color: $color-primary-black;
+        }
+        &--back {
+            position: absolute;
+            &-2 {
+                background-color: $main-color;
+            }
+
+            &-price-box {
+                display: block;
+                margin: 20rem auto;
+                text-align: center;
+                color: $color-white;
+                & .only{
+                    font-size: 1.6rem;
+                    text-transform: uppercase;
+                }
+
+                & .price {
+                    margin-top: 1rem;
+                    font-size: 5rem;
+                    font-weight: 95;
+                }
+            }
+            transform: rotateY(180deg);
+            
+        }
+        
+        &:hover &--front {
+            transform: rotateY(-180deg);
+        }
+
+        &:hover &--back {
+            transform: rotateY(0);
+        }
+    }
+
+    &__side--main {
+        border: 2px solid $main-color;
+        box-shadow: 0 0 3.5rem rgba($main-color, .85);
+        border-radius: 8px;
+    }
+
+    &__side--tertiary {
+        grid-column: 3;
+    }
+
+    &__side-icon {
+        display: block;
+        width: 11rem;
+        height: 11rem;
+        margin: 2.5rem auto;
+        color: $color-white;
+
+        &--main {
+            color: $main-color;
+        }
+    }
+
+    &__side-list {
+        width: 80%;
+        margin: 6.5rem auto;
+        color: $color-white;
+        font-size: 1.6rem;
+        text-align: center;
+        
+        & ul {
+            list-style: none;
+            
+            & li {
+                &:not(:last-child)
+                {
+                    margin-bottom: 2rem;
+                    border-bottom: 2px solid rgba($color-white, .1);
+                    padding-bottom: 1rem;
+                }
+            }
+        }
+    }
+
+}

@@ -1,0 +1,37 @@
+.red-bar {
+    width: .5rem;
+    height: 100vh;
+    background-color: $main-color;
+    margin-left: 5.5rem;
+    animation: loadbar 2s forwards ease-in-out;
+    
+}
+
+.icon-section__red-bar {
+    animation: none;
+    height: 25vh;
+
+    @include respond(big-desktop) {
+        height: 27vh;
+    }
+
+    @include respond(tab-land){
+        height: 28vh;
+    }
+    @include respond(tab-port){}
+
+    @include respond(phone) {
+        height: 30vh;
+    }
+}
+
+
+.section__text {
+    &--redbar {
+        height: 50vh;
+        
+        &--small {
+            height: 8vh;
+        }
+    }
+}

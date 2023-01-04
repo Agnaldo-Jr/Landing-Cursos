@@ -1,0 +1,75 @@
+@keyframes loadbar{
+    0% {
+        height: 0rem;
+    }
+}
+
+@keyframes introText {
+    0% {
+        opacity: 0;
+        transform: translateX(-35rem);
+    }
+
+    50% {
+        transform: translateX(2rem);
+    }
+
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes btnBouncing {
+    0% {
+        transform: translateY(0rem);
+    }
+    50% {
+        transform: translateY(1.5rem);
+    }
+    100% {
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    0%{
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+// js scroll animation
+
+.hidden {
+    opacity: 0;
+    filter: blur(3px);
+    transition: all 1s ease-in-out;
+}
+
+.show {
+    opacity: 1;
+    filter: blur(0);
+}
+
+@keyframes boxGlow {
+    0%{
+        box-shadow: 0 0 5rem rgba(#E0254F, .4);
+    }
+    50% {
+        box-shadow: 0 0 5rem rgba(#E0254F, .85);
+    }
+    100% {
+        box-shadow: 0 0 5rem rgba(#E0254F, .4);
+    }
+}
+
+@include respond(phone) {
+    .hidden {
+        transition: none;
+    }
+
+    .show {
+        transition: none;
+    }
+}
